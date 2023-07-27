@@ -1,24 +1,24 @@
 <div align="center">
 
-## RemoteCLIP: A Vision Language Foundation Model for Remote Sensing
+## RemoteCLIP🛰️: A Vision Language Foundation Model for Remote Sensing
 
 [Fan Liu (刘凡)](https://multimodality.group/author/%E5%88%98%E5%87%A1/)*
-<img src="assets/hhu_logo.png" alt="Logo" width="10">, &nbsp; 
+<img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; 
 [Delong Chen (陈德龙)](https://chendelong.world/)*
-<img src="assets/hhu_logo.png" alt="Logo" width="10">, &nbsp; 
+<img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; 
 [Zhangqingyun Guan (管张青云)]() 
-<img src="assets/hhu_logo.png" alt="Logo" width="10"> , &nbsp; 
+<img src="assets/hhu_logo.png" alt="Logo" width="15"> , &nbsp; 
 [Xiaocong Zhou (周晓聪)]()
-<img src="assets/hhu_logo.png" alt="Logo" width="10">, &nbsp; 
+<img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; 
 [Jiale Zhu (朱佳乐)]() 
-<img src="assets/hhu_logo.png" alt="Logo" width="10">, &nbsp; 
+<img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; 
 [Jun Zhou (周峻)](https://experts.griffith.edu.au/7205-jun-zhou) 
-<img src="assets/griffith_logo.png" alt="Logo" width="10">
+<img src="assets/griffith_logo.png" alt="Logo" width="15">
 
-<img src="assets/hhu_logo.png" alt="Logo" width="15"> Hohai Univeristy (河海大学)&nbsp; &nbsp; 
-<img src="assets/griffith_logo.png" alt="Logo" width="15"> Griffith University
+<img src="assets/hhu_logo_text.png" alt="Logo" width="80"> &nbsp; &nbsp; 
+<img src="assets/griffith_logo_text.png" alt="Logo" width="60">
 
-<span style="font-size: smaller;">\* Equal Contribution</span>
+\* Equal Contribution
 
 </div>
 
@@ -32,12 +32,16 @@
 
 Welcome to the official repository of paper "*RemoteCLIP: A Vision Language Foundation Model for Remote Sensing*"! [[arXiv]](https://arxiv.org/abs/2306.11029)
 
-> General-purpose foundation models have become increasingly important in the field of artificial intelligence. While self-supervised learning (SSL) and Masked Image Modeling (MIM) have led to promising results in building such foundation models for remote sensing, these models primarily learn low-level features, require annotated data for fine-tuning, and not applicable for retrieval and zero-shot applications due to the lack of language understanding. **In response to these limitations, we propose RemoteCLIP, the first vision-language foundation model for remote sensing that aims to learn robust visual features with rich semantics, as well as aligned text embeddings for seamless downstream application.** To address the scarcity of pre-training data, we leverage data scaling, converting heterogeneous annotations based on Box-to-Caption (B2C) and Mask-to-Box (M2B) conversion, and further incorporating UAV imagery, resulting a 12xlarger pretraining dataset. 
+General-purpose foundation models have become increasingly important in the field of artificial intelligence. While self-supervised learning (SSL) and Masked Image Modeling (MIM) have led to promising results in building such foundation models for remote sensing, these models primarily learn low-level features, require annotated data for fine-tuning, and not applicable for retrieval and zero-shot applications due to the lack of language understanding. 
+
+**In response to these limitations, we propose RemoteCLIP, the first vision-language foundation model for remote sensing that aims to learn robust visual features with rich semantics, as well as aligned text embeddings for seamless downstream application.** To address the scarcity of pre-training data, we leverage data scaling, converting heterogeneous annotations based on Box-to-Caption (B2C) and Mask-to-Box (M2B) conversion, and further incorporating UAV imagery, resulting a 12xlarger pretraining dataset. 
 
 ![](assets/figure_2.png)
 ![](assets/figure_5.png)
 
-> RemoteCLIP can be applied to a variety of downstream tasks, including zero-shot image classification, linear probing, k-NN classification, few-shot classification, image-text retrieval, and object counting. Evaluations on 16 datasets, including a newly introduced RemoteCount benchmark to test the object counting ability, show that RemoteCLIP consistently outperforms baseline foundation models across different model scales. **Impressively, RemoteCLIP outperform previous SoTA by 9.14% mean recall on RSICD dataset and by 8.92% on RSICD dataset</u>. For zero-shot classification, our RemoteCLIP outperform CLIP baseline by up to 6.39% average accuracy on 12 downstream datasets.**
+RemoteCLIP can be applied to a variety of downstream tasks, including zero-shot image classification, linear probing, k-NN classification, few-shot classification, image-text retrieval, and object counting. Evaluations on 16 datasets, including a newly introduced RemoteCount benchmark to test the object counting ability, show that RemoteCLIP consistently outperforms baseline foundation models across different model scales. 
+
+**Impressively, RemoteCLIP outperform previous SoTA by 9.14% mean recall on RSICD dataset and by 8.92% on RSICD dataset</u>. For zero-shot classification, our RemoteCLIP outperform CLIP baseline by up to 6.39% average accuracy on 12 downstream datasets.**
 
 ![](assets/table_2.png)
 
@@ -71,7 +75,6 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     from PIL import Image
 
     model_name = 'ViT-L-14' # 'RN50' or 'ViT-B-32' or 'ViT-L-14'
-
     model, _, preprocess = open_clip.create_model_and_transforms(model_name)
     tokenizer = open_clip.get_tokenizer(model_name)
 

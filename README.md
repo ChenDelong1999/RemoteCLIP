@@ -125,6 +125,10 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     </div>
 
 
+### Acknoledgements
+
+- Thanks Wenwen Cai (蔡雯雯) for her efforts on the RemoteCount dataset.
+
 ### Citation
 
 If you find this work useful, please cite our paper as:

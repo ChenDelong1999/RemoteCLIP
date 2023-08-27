@@ -26,12 +26,12 @@
 
 ### News
 
-- **2023/07/27**: We make pretrained checkpoints of RemoteCLIP models (`ResNet-50`, `ViT-base-32`, and `ViT-large-14`) available! We converted the weights to the [`OpenCLIP`](https://github.com/mlfoundations/open_clip) format, such that loading and using RemoteCLIP is extreamly easy! Please see the [Load RemoteCLIP](#load-remoteclip) section for details.
+- **2023/07/27**: We make pretrained checkpoints of RemoteCLIP models (`ResNet-50`, `ViT-base-32`, and `ViT-large-14`) available! We converted the weights to the [`OpenCLIP`](https://github.com/mlfoundations/open_clip) format, such that loading and using RemoteCLIP is extreamly easy! Please see the [Load RemoteCLIP](#load-remoteclip) section or [this jupyter notebook](demo.ipynb) for details.
 - **2023/06/19**: We propose RemoteCLIP, the first vision-language foundation model for remote sensing. The preprint of our RemoteCLIP paper is available online [[arXiv url]](https://arxiv.org/abs/2306.11029).
 
 ### Introduction
 
-Welcome to the official repository of paper "*RemoteCLIP: A Vision Language Foundation Model for Remote Sensing*"! [[arXiv]](https://arxiv.org/abs/2306.11029)
+Welcome to the official repository of paper "[*RemoteCLIP: A Vision Language Foundation Model for Remote Sensing*](https://arxiv.org/abs/2306.11029)"! 
 
 General-purpose foundation models have become increasingly important in the field of artificial intelligence. While self-supervised learning (SSL) and Masked Image Modeling (MIM) have led to promising results in building such foundation models for remote sensing, these models primarily learn low-level features, require annotated data for fine-tuning, and not applicable for retrieval and zero-shot applications due to the lack of language understanding. 
 
@@ -59,13 +59,13 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     pip install open-clip-torch
     ```
 
-- Then, download the pretrained checkpoint from [huggingface](https://huggingface.co/chendelong/RemoteCLIP/tree/main), you can clone the repo with Git LFS, or download it automatically via [huggingface_hub](https://github.com/huggingface/huggingface_hub) (run `pip install huggingface_hub` first)
+- Then, download the pretrained checkpoint from [huggingface](https://huggingface.co/chendelong/RemoteCLIP/tree/main), you can clone the repo with Git LFS, or download it automatically via [huggingface_hub](https://github.com/huggingface/huggingface_hub):
 
     ```python
     from huggingface_hub import hf_hub_download
 
     for model_name in ['RN50', 'ViT-B-32', 'ViT-L-14']:
-        checkpoint_path = hf_hub_download("chendelong/RemoteCLIP", f"RemoteCLIP-{model_name}.pt").
+        checkpoint_path = hf_hub_download("chendelong/RemoteCLIP", f"RemoteCLIP-{model_name}.pt", cache_dir='checkpoints')
         print(f'{model_name} is downloaded to {checkpoint_path}.')
 
     ```
@@ -81,7 +81,10 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     tokenizer = open_clip.get_tokenizer(model_name)
 
     ckpt = torch.load(f"path/to/your/checkpoints/RemoteCLIP-{model_name}.pt", map_location="cpu")
-    model.load_state_dict(ckpt).cuda().eval()
+    message = model.load_state_dict(ckpt)
+    print(message)
+
+    model = model.cuda().eval()
     ```
 
 - The following is an example of text-to-image retrieval with RemoteCILP:
@@ -123,6 +126,8 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     <div align="center">
     <img src="assets/airport.jpg" alt="airport" width="224">
     </div>
+
+    You can run the above code in [demo.ipynb](demo.ipynb).
 
 
 ### Acknoledgements

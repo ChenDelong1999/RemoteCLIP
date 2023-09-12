@@ -6,12 +6,12 @@
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
 [Delong Chen (陈德龙)](https://chendelong.world/)*
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
-[Zhangqingyun Guan (管张青云)]() 
+Zhangqingyun Guan (管张青云)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">
 
-[Xiaocong Zhou (周晓聪)]()
+Xiaocong Zhou (周晓聪)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
-[Jiale Zhu (朱佳乐)]() 
+Jiale Zhu (朱佳乐)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
 [Jun Zhou (周峻)](https://experts.griffith.edu.au/7205-jun-zhou) 
 <img src="assets/griffith_logo.png" alt="Logo" width="15">

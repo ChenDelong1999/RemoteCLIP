@@ -25,17 +25,16 @@ Jiale Zhu (朱佳乐)
 
 
 ### News
-
-- **2023/07/27**: We make pretrained checkpoints of RemoteCLIP models (`ResNet-50`, `ViT-base-32`, and `ViT-large-14`) available! We converted the weights to the [`OpenCLIP`](https://github.com/mlfoundations/open_clip) format, such that loading and using RemoteCLIP is extremely easy! Please see the [Load RemoteCLIP](#load-remoteclip) section or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb) for details.
+- **2023/07/27**: We make pretrained checkpoints of RemoteCLIP models (`ResNet-50`, `ViT-base-32`, and `ViT-large-14`) available! We converted the weights to the [`OpenCLIP`](https://github.com/mlfoundations/open_clip) format, such that loading and using RemoteCLIP is extremely easy! Please see the [Load RemoteCLIP](#load-remoteclip) section for details. We also provide a Jupyter Notebook [demo.ipynb](demo.ipynb), and you can also [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb).
 - **2023/06/19**: We propose RemoteCLIP, the first vision-language foundation model for remote sensing. The preprint of our RemoteCLIP paper is available online [[arXiv url]](https://arxiv.org/abs/2306.11029).
 
 ### Introduction
 
-Welcome to the official repository of paper "[*RemoteCLIP: A Vision Language Foundation Model for Remote Sensing*](https://arxiv.org/abs/2306.11029)"! 
+Welcome to the official repository of our paper "[*RemoteCLIP: A Vision Language Foundation Model for Remote Sensing*](https://arxiv.org/abs/2306.11029)"! 
 
-General-purpose foundation models have become increasingly important in the field of artificial intelligence. While self-supervised learning (SSL) and Masked Image Modeling (MIM) have led to promising results in building such foundation models for remote sensing, these models primarily learn low-level features, require annotated data for fine-tuning, and not applicable for retrieval and zero-shot applications due to the lack of language understanding. 
+General-purpose foundation models have become increasingly important in the field of artificial intelligence. While self-supervised learning (SSL) and Masked Image Modeling (MIM) have led to promising results in building such foundation models for remote sensing, these models primarily learn low-level features, require annotated data for fine-tuning, and are not applicable for retrieval and zero-shot applications due to the lack of language understanding. 
 
-**In response to these limitations, we propose RemoteCLIP, the first vision-language foundation model for remote sensing that aims to learn robust visual features with rich semantics, as well as aligned text embeddings for seamless downstream application.** To address the scarcity of pre-training data, we leverage data scaling, converting heterogeneous annotations based on Box-to-Caption (B2C) and Mask-to-Box (M2B) conversion, and further incorporating UAV imagery, resulting a 12xlarger pretraining dataset. 
+**In response to these limitations, we propose RemoteCLIP, the first vision-language foundation model for remote sensing that aims to learn robust visual features with rich semantics, as well as aligned text embeddings for seamless downstream application.** To address the scarcity of pre-training data, we leverage data scaling, converting heterogeneous annotations based on Box-to-Caption (B2C) and Mask-to-Box (M2B) conversion, and further incorporating UAV imagery, resulting in a 12xlarger pretraining dataset. 
 
 ![](assets/figure-2.png)
 
@@ -43,16 +42,16 @@ RemoteCLIP can be applied to a variety of downstream tasks, including zero-shot 
 
 ![](assets/figure-5.png)
 
-**Impressively, RemoteCLIP outperform previous SoTA by 9.14% mean recall on RSICD dataset and by 8.92% on RSICD dataset</u>. For zero-shot classification, our RemoteCLIP outperform CLIP baseline by up to 6.39% average accuracy on 12 downstream datasets.**
+**Impressively, RemoteCLIP outperforms previous SoTA by 9.14% mean recall on the RSICD dataset and by 8.92% on RSICD dataset</u>. For zero-shot classification, our RemoteCLIP outperforms the CLIP baseline by up to 6.39% average accuracy on 12 downstream datasets.**
 
 ![](assets/table-2.png)
 
 
 ### Load RemoteCLIP
 
-RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, and we have converted the pretrained checkpoints to [`OpenCLIP`](https://github.com/mlfoundations/open_clip) compatible format and uploaded them to [[this Huggingface Repo]](https://huggingface.co/chendelong/RemoteCLIP/tree/main), such that accessing the model could be more convinent!
+RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, and we have converted the pretrained checkpoints to [`OpenCLIP`](https://github.com/mlfoundations/open_clip) compatible format and uploaded them to [[this Huggingface Repo]](https://huggingface.co/chendelong/RemoteCLIP/tree/main), such that accessing the model could be more convenient!
 
-- To load RemoteCILP, please first prepare a environment with [OpenCLIP](https://github.com/mlfoundations/open_clip) installation, for example, by runing this command:
+- To load RemoteCILP, please first prepare an environment with [OpenCLIP](https://github.com/mlfoundations/open_clip) installation, for example, by running this command:
 
     ```bash
     # https://pypi.org/project/open-clip-torch/
@@ -70,7 +69,7 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
 
     ```
 
-- Now, you can initialize a CLIP model with `OpenCLIP`, then load the RemoteCLIP checkpoint with few lines of code:
+- Now, you can initialize a CLIP model with `OpenCLIP`, then load the RemoteCLIP checkpoint with a few lines of code:
 
     ```python
     import torch, open_clip
@@ -91,8 +90,8 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
 
     ```python
     text_queries = [
-        "A busy airport with many aireplans.", 
-        "Satellite view of Hohai university.", 
+        "A busy airport with many airplanes.", 
+        "Satellite view of Hohai University.", 
         "A building next to a lake.", 
         "Many people in a stadium.", 
         "a cute cat",
@@ -116,8 +115,8 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     You could get the following outputs:
     ```
     Predictions of RN50:
-    A busy airport with many aireplans.      100.0%
-    Satelite view of Hohai university.         0.0%
+    A busy airport with many airplanes.      100.0%
+    Satellite view of Hohai University.        0.0%
     A building next to a lake.                 0.0%
     Many people in a stadium.                  0.0%
     a cute cat                                 0.0%
@@ -127,12 +126,13 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     <img src="assets/airport.jpg" alt="airport" width="224">
     </div>
 
-    You can run the above code in [demo.ipynb](demo.ipynb).
+    You can run the above code in [demo.ipynb](demo.ipynb), and you can also [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb) 
 
 
-### Acknoledgements
+### Acknowledgments
 
 - Thanks Wenwen Cai (蔡雯雯) for her efforts on the RemoteCount dataset.
+- Thanks [Dr. Gordon McDonald](https://github.com/gdmcdonald) for making Jupyter Notebook available in Colab!
 
 ### Citation
 

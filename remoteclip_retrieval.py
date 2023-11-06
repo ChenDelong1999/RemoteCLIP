@@ -63,8 +63,8 @@ class JsonDataset(Dataset):
         self.json_dir = json_dir
         self.transforms = transforms
         self.img_dir = img_dir
-        self.images=[]
-        self.captions=[]
+        self.images = []
+        self.captions = []
         self.read_json()
         self.duplicate()
 

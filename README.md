@@ -129,6 +129,32 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     You can run the above code in [demo.ipynb](demo.ipynb), and you can also [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb) 
 
 
+### Retrieval for RSITMD/RSICD/UCM
+We first present the performance
+on RemoteCLIP on three remote sensing image-text retrieval
+benchmarks (RSITMD, RSICD, UCM). To perform cross-modal retrieval with RemoteCLIP, we extract image and text representations on the
+test split, perform L-2 normalization, and retrieval most similar
+samples based on the dot-product similarity measure. We
+show the retrieval recall of top-1 (R@1), top-5 (R@5), top-10 (R@10), and the mean recall of these values.
+- To run the ```remoteclip_retrieval.py```, please first prepare an environment with [OpenCLIP](https://github.com/mlfoundations/open_clip) installation, for example, by running this command:
+
+    ```bash
+    pip install open-clip-torch
+    pip install clip_benchmark
+    ```
+-  You can download the json dataset of [RSITMD](https://github.com/xiaoyuan1996/AMFMN/blob/master/RSITMD/README.md),
+[RSICD](https://github.com/201528014227051/RSICD_optimal),
+[UCM](https://aistudio.baidu.com/datasetdetail/90740).
+- Use the following code for image-to-text and text-to-image retrieval. For example
+```bash
+torchrun  remoteclip_retrieval.py \
+  --model-name "ViT-B-32" \
+  --retrieval-images-dir "/home/user/rsitmd/images" \
+  --retrieval-json-dir "/home/user/dataset_rsitmd.json" \
+  --remoteclip-path "/home/user/RemoteCLIP_ViT-B-32.pt"
+```
+
+
 ### Acknowledgments
 
 - Thanks Wenwen Cai (蔡雯雯) for her efforts on the RemoteCount dataset.

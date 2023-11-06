@@ -187,11 +187,13 @@ if __name__ == "__main__":
     args = parse_args()
     args.device = "cuda"
     model, preprocess_train, preprocess_val, preprocess_aug, tokenize = get_model(args)
+
     # Image-text retrieval
     all_metrics = {}
     metrics = {}
     retrieval_metrics = retrieval_evaluation(args, model, preprocess_aug, tokenize)
     metrics.update(retrieval_metrics)
     all_metrics.update(retrieval_metrics)
+
     for name, val in metrics.items():
         print(name, round(val, 2))

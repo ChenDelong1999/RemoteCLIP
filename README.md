@@ -136,7 +136,7 @@ benchmarks (RSITMD, RSICD, UCM). To perform cross-modal retrieval with RemoteCLI
 test split, perform L-2 normalization, and retrieval most similar
 samples based on the dot-product similarity measure. We
 show the retrieval recall of top-1 (R@1), top-5 (R@5), top-10 (R@10), and the mean recall of these values.
-- To run the ```remoteclip_retrieval.py```, please first prepare an environment with [OpenCLIP](https://github.com/mlfoundations/open_clip) installation, for example, by running this command:
+- To run the ```remoteclip_retrieval.py```, please first prepare an environment. For example, by running this command:
 
     ```bash
     pip install open-clip-torch

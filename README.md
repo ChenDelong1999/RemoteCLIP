@@ -133,9 +133,7 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
 
 
 ### Retrieval Evaluation
-> We first present the performance
-on RemoteCLIP on three remote sensing image-text retrieval
-benchmarks (RSITMD, RSICD, UCM). To perform cross-modal retrieval with RemoteCLIP, we extract image and text representations on the
+> To perform cross-modal retrieval with RemoteCLIP, we extract image and text representations on the
 test split, perform L-2 normalization, and retrieval most similar
 samples based on the dot-product similarity measure. We
 show the retrieval recall of top-1 (R@1), top-5 (R@5), top-10 (R@10), and the mean recall of these values.
@@ -149,7 +147,7 @@ We have prepared a `retrieval.py` script to replicate the retrieval evaluation. 
 - Execute the following command to obtain image-to-text and text-to-image retrieval results:
 
     ```bash
-    torchrun  remoteclip_retrieval.py \
+    python retrieval.py \
     --model-name "ViT-B-32" \
     --retrieval-images-dir "/path/to/rsitmd/images" \
     --retrieval-json-dir "/path/to/dataset_rsitmd.json" \

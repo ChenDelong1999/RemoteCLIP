@@ -6,7 +6,7 @@
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
 [Delong Chen (陈德龙)](https://chendelong.world/)*
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
-Zhangqingyun Guan (管张青云)
+[Zhangqingyun Guan (管张青云)](https://github.com/gzqy1026)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">
 
 Xiaocong Zhou (周晓聪)
@@ -25,7 +25,10 @@ Jiale Zhu (朱佳乐)
 
 
 ### News
+- **2023/11/07**: To facilitate reproducing RemoteCLIP's SOTA image-text retrieval results, we have prepared a `retrieval.py` script for retrieval evaluation on RSITMD, RSICD, and UCM datasets. Please see the [Retrieval Evaluation](#retrieval-evaluation) section for details.
+
 - **2023/07/27**: We make pretrained checkpoints of RemoteCLIP models (`ResNet-50`, `ViT-base-32`, and `ViT-large-14`) available! We converted the weights to the [`OpenCLIP`](https://github.com/mlfoundations/open_clip) format, such that loading and using RemoteCLIP is extremely easy! Please see the [Load RemoteCLIP](#load-remoteclip) section for details. We also provide a Jupyter Notebook [demo.ipynb](demo.ipynb), and you can also [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb).
+
 - **2023/06/19**: We propose RemoteCLIP, the first vision-language foundation model for remote sensing. The preprint of our RemoteCLIP paper is available online [[arXiv url]](https://arxiv.org/abs/2306.11029).
 
 ### Introduction
@@ -129,30 +132,29 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     You can run the above code in [demo.ipynb](demo.ipynb), and you can also [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb) 
 
 
-### Retrieval for RSITMD/RSICD/UCM
-We first present the performance
+### Retrieval Evaluation
+> We first present the performance
 on RemoteCLIP on three remote sensing image-text retrieval
 benchmarks (RSITMD, RSICD, UCM). To perform cross-modal retrieval with RemoteCLIP, we extract image and text representations on the
 test split, perform L-2 normalization, and retrieval most similar
 samples based on the dot-product similarity measure. We
 show the retrieval recall of top-1 (R@1), top-5 (R@5), top-10 (R@10), and the mean recall of these values.
-- To run the ```remoteclip_retrieval.py```, please first prepare an environment. For example, by running this command:
+
+We have prepared a `retrieval.py` script to replicate the retrieval evaluation. Follow the steps below to evaluate the retrieval performance of RemoteCLIP on the RSITMD, RSICD, and UCM datasets:
+
+- To run the retrieval evaluation, please first install additional dependencies: `pip install clip_benchmark`.
+- Then download and extract image-text datasets [RSITMD](https://github.com/xiaoyuan1996/AMFMN/blob/master/RSITMD/README.md),
+[RSICD](https://github.com/201528014227051/RSICD_optimal), and
+[UCM](https://aistudio.baidu.com/datasetdetail/90740).
+- Execute the following command to obtain image-to-text and text-to-image retrieval results:
 
     ```bash
-    pip install open-clip-torch
-    pip install clip_benchmark
+    torchrun  remoteclip_retrieval.py \
+    --model-name "ViT-B-32" \
+    --retrieval-images-dir "/path/to/rsitmd/images" \
+    --retrieval-json-dir "/path/to/dataset_rsitmd.json" \
+    --remoteclip-path "/path/to/RemoteCLIP_ViT-B-32.pt"
     ```
--  You can download the json dataset of [RSITMD](https://github.com/xiaoyuan1996/AMFMN/blob/master/RSITMD/README.md),
-[RSICD](https://github.com/201528014227051/RSICD_optimal),
-[UCM](https://aistudio.baidu.com/datasetdetail/90740).
-- Use the following code for image-to-text and text-to-image retrieval. For example
-```bash
-torchrun  remoteclip_retrieval.py \
-  --model-name "ViT-B-32" \
-  --retrieval-images-dir "/home/user/rsitmd/images" \
-  --retrieval-json-dir "/home/user/dataset_rsitmd.json" \
-  --remoteclip-path "/home/user/RemoteCLIP_ViT-B-32.pt"
-```
 
 
 ### Acknowledgments

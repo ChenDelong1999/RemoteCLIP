@@ -25,11 +25,11 @@ Jiale Zhu (朱佳乐)
 
 
 ### News
-- **2023/12/01**: You can now auto-label remote sensing datasets with RemoteCLIP using the [`autodistill-remote-clip`](https://github.com/autodistill/autodistill-remote-clip) extension in the [Autodistill](https://github.com/autodistill/autodistill) framework, thanks [James Gallagher](https://jamesg.blog/)!
+- **2023/12/01**: You can now auto-label remote sensing datasets with RemoteCLIP using the [`autodistill-remote-clip`](https://github.com/autodistill/autodistill-remote-clip) extension in the [Autodistill](https://github.com/autodistill/autodistill) framework, thanks [James Gallagher](https://jamesg.blog/) from Roboflow!
   
 - **2023/11/07**: To facilitate reproducing RemoteCLIP's SOTA image-text retrieval results, we have prepared a `retrieval.py` script for retrieval evaluation on RSITMD, RSICD, and UCM datasets. Please see the [Retrieval Evaluation](#retrieval-evaluation) section for details.
 
-- **2023/07/27**: We make pretrained checkpoints of RemoteCLIP models (`ResNet-50`, `ViT-base-32`, and `ViT-large-14`) available! We converted the weights to the [`OpenCLIP`](https://github.com/mlfoundations/open_clip) format, such that loading and using RemoteCLIP is extremely easy! Please see the [Load RemoteCLIP](#load-remoteclip) section for details. We also provide a Jupyter Notebook [demo.ipynb](demo.ipynb). You can also [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb), thanks [Dr. Gordon McDonald](https://github.com/gdmcdonald)!
+- **2023/07/27**: We make pretrained checkpoints of RemoteCLIP models (`ResNet-50`, `ViT-base-32`, and `ViT-large-14`) available! We converted the weights to the [`OpenCLIP`](https://github.com/mlfoundations/open_clip) format, such that loading and using RemoteCLIP is extremely easy! Please see the [Load RemoteCLIP](#load-remoteclip) section for details. We also provide a Jupyter Notebook [demo.ipynb](demo.ipynb). You can also [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ChenDelong1999/RemoteCLIP/blob/main/RemoteCLIP_colab_demo.ipynb), thanks [Dr. Gordon McDonald](https://github.com/gdmcdonald) from the University of Sydney!
 
 - **2023/06/19**: We propose RemoteCLIP, the first vision-language foundation model for remote sensing. The preprint of our RemoteCLIP paper is available online [[arXiv url]](https://arxiv.org/abs/2306.11029).
 

@@ -1,11 +1,11 @@
 <div align="center">
 
-## RemoteCLIP🛰️: A Vision Language Foundation Model for Remote Sensing
+## [RemoteCLIP🛰️: A Vision Language Foundation Model for Remote Sensing](https://arxiv.org/abs/2306.11029)
 
-[Fan Liu (刘凡)](https://multimodality.group/author/%E5%88%98%E5%87%A1/)*
+[Fan Liu (刘凡)](https://multimodality.group/author/%E5%88%98%E5%87%A1/)$^{✉,*}$
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
-[Delong Chen (陈德龙)](https://chendelong.world/)*
-<img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
+[Delong Chen (陈德龙)](https://chendelong.world/)$^{✉,*}$
+<img src="assets/hkust_logo.png" alt="Logo" width="10">, &nbsp; &nbsp; 
 [Zhangqingyun Guan (管张青云)](https://github.com/gzqy1026)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">
 
@@ -13,10 +13,18 @@ Xiaocong Zhou (周晓聪)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
 Jiale Zhu (朱佳乐)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
+
+[Qiaolin Ye (叶巧林)](https://it.njfu.edu.cn/szdw/20181224/i14059.html)
+<img src="assets/nfu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
+Liyong Fu (符利勇)
+<img src="assets/caf_logo.jpg" alt="Logo" width="15">, &nbsp; &nbsp; 
 [Jun Zhou (周峻)](https://experts.griffith.edu.au/7205-jun-zhou) 
 <img src="assets/griffith_logo.png" alt="Logo" width="15">
 
 <img src="assets/hhu_logo_text.png" alt="Logo" width="100"> &nbsp; &nbsp;  &nbsp; &nbsp; 
+<img src="assets/hkust_logo_text.png" alt="Logo" width="100"> &nbsp; &nbsp;  &nbsp; &nbsp; 
+<img src="assets/nfu_logo_text.jpg" alt="Logo" width="50"> &nbsp; &nbsp;  &nbsp; &nbsp; 
+<img src="assets/caf_logo.jpg" alt="Logo" width="40"> &nbsp; &nbsp;  &nbsp; &nbsp; 
 <img src="assets/griffith_logo_text.png" alt="Logo" width="90">
 
 \* Equal Contribution
@@ -174,6 +182,8 @@ If you find this work useful, please cite our paper as:
                   Zhangqingyun Guan and
                   Xiaocong Zhou and
                   Jiale Zhu and
+                  Qiaolin Ye and
+                  Liyong Fu and
                   Jun Zhou},
   title        = {RemoteCLIP: {A} Vision Language Foundation Model for Remote Sensing},
   journal      = {CoRR},

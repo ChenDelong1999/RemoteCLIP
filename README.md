@@ -2,16 +2,16 @@
 
 ## [RemoteCLIP🛰️: A Vision Language Foundation Model for Remote Sensing](https://arxiv.org/abs/2306.11029)
 
-[Fan Liu (刘凡)](https://multimodality.group/author/%E5%88%98%E5%87%A1/)$^{✉,*}$
+[Fan Liu (刘凡)](https://multimodality.group/author/%E5%88%98%E5%87%A1/)✉ *
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
-[Delong Chen (陈德龙)](https://chendelong.world/)$^{✉,*}$
+[Delong Chen (陈德龙)](https://chendelong.world/)✉ *
 <img src="assets/hkust_logo.png" alt="Logo" width="10">, &nbsp; &nbsp; 
 [Zhangqingyun Guan (管张青云)](https://github.com/gzqy1026)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">
 
-Xiaocong Zhou (周晓聪)
+[Xiaocong Zhou (周晓聪)](https://multimodality.group/author/%E5%91%A8%E6%99%93%E8%81%AA/)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
-Jiale Zhu (朱佳乐)
+[Jiale Zhu (朱佳乐)](https://multimodality.group/author/%E6%9C%B1%E4%BD%B3%E4%B9%90/)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
 
 [Qiaolin Ye (叶巧林)](https://it.njfu.edu.cn/szdw/20181224/i14059.html)

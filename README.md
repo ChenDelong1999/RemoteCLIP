@@ -27,12 +27,16 @@ Liyong Fu (符利勇)
 <img src="assets/caf_logo.jpg" alt="Logo" width="40"> &nbsp; &nbsp;  &nbsp; &nbsp; 
 <img src="assets/griffith_logo_text.png" alt="Logo" width="90">
 
-\* Equal Contribution
+\* *Equal Contribution*
 
 </div>
 
 
 ### News
+- **2024/03/01**: RemoteCLIP joined the leaderboard on [paperswithcode.com](https://paperswithcode.com/paper/remoteclip-a-vision-language-foundation-model).
+  - [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/remoteclip-a-vision-language-foundation-model/cross-modal-retrieval-on-rsicd)](https://paperswithcode.com/sota/cross-modal-retrieval-on-rsicd?p=remoteclip-a-vision-language-foundation-model)<img src="assets/RSICD Leaderboard.png" alt="Logo" width="400">
+  - [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/remoteclip-a-vision-language-foundation-model/cross-modal-retrieval-on-rsitmd)](https://paperswithcode.com/sota/cross-modal-retrieval-on-rsitmd?p=remoteclip-a-vision-language-foundation-model)<img src="assets/RSITMD Leaderboard.png" alt="Logo" width="400">
+
 - **2023/12/01**: You can now auto-label remote sensing datasets with RemoteCLIP using the [`autodistill-remote-clip`](https://github.com/autodistill/autodistill-remote-clip) extension in the [Autodistill](https://github.com/autodistill/autodistill) framework, thanks [James Gallagher](https://jamesg.blog/) from Roboflow!
   
 - **2023/11/07**: To facilitate reproducing RemoteCLIP's SOTA image-text retrieval results, we have prepared a `retrieval.py` script for retrieval evaluation on RSITMD, RSICD, and UCM datasets. Please see the [Retrieval Evaluation](#retrieval-evaluation) section for details.

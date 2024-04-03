@@ -14,7 +14,7 @@
 [Jiale Zhu (朱佳乐)](https://multimodality.group/author/%E6%9C%B1%E4%BD%B3%E4%B9%90/)
 <img src="assets/hhu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
 
-[Qiaolin Ye (叶巧林)](https://it.njfu.edu.cn/szdw/20181224/i14059.html)
+[Qiaolin Ye (业巧林)](https://it.njfu.edu.cn/szdw/20181224/i14059.html)
 <img src="assets/nfu_logo.png" alt="Logo" width="15">, &nbsp; &nbsp; 
 Liyong Fu (符利勇)
 <img src="assets/caf_logo.jpg" alt="Logo" width="15">, &nbsp; &nbsp; 

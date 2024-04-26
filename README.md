@@ -34,6 +34,8 @@ Liyong Fu (符利勇)
 
 ### News
 
+- **2024/04/26**: The training dataset of RemoteCLIP (RET-3, SEG-4, DET-10) is released on 🤗HuggingFace, see [[gzqy1026/RemoteCLIP](https://huggingface.co/datasets/gzqy1026/RemoteCLIP)].
+
 - **2024/04/03**: Our RemoteCLIP paper has been accepted by IEEE Transactions on Geoscience and Remote Sensing (TGRS) [[doi](https://ieeexplore.ieee.org/document/10504785)].
 
 - **2024/03/01**: RemoteCLIP joined the leaderboard on [paperswithcode.com](https://paperswithcode.com/paper/remoteclip-a-vision-language-foundation-model) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/remoteclip-a-vision-language-foundation-model/cross-modal-retrieval-on-rsicd)](https://paperswithcode.com/sota/cross-modal-retrieval-on-rsicd?p=remoteclip-a-vision-language-foundation-model) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/remoteclip-a-vision-language-foundation-model/cross-modal-retrieval-on-rsitmd)](https://paperswithcode.com/sota/cross-modal-retrieval-on-rsitmd?p=remoteclip-a-vision-language-foundation-model)
@@ -76,7 +78,7 @@ RemoteCLIP is trained with the [`ITRA`](https://itra.readthedocs.io) codebase, a
     pip install open-clip-torch
     ```
 
-- Then, download the pretrained checkpoint from [huggingface](https://huggingface.co/chendelong/RemoteCLIP/tree/main), you can clone the repo with Git LFS, or download it automatically via [huggingface_hub](https://github.com/huggingface/huggingface_hub):
+- Then, download the pretrained checkpoint from [huggingface](https://huggingface.co/chendelong/RemoteCLIP), you can clone the repo with Git LFS, or download it automatically via [huggingface_hub](https://github.com/huggingface/huggingface_hub):
 
     ```python
     from huggingface_hub import hf_hub_download

@@ -165,10 +165,10 @@ We have prepared a `retrieval.py` script to replicate the retrieval evaluation. 
 
     ```bash
     python retrieval.py \
-    --model-name "ViT-B-32" \
-    --retrieval-images-dir "/path/to/rsitmd/images" \
-    --retrieval-json-dir "/path/to/dataset_rsitmd.json" \
-    --remoteclip-path "/path/to/RemoteCLIP_ViT-B-32.pt"
+      --model-name "ViT-B-32" \
+      --retrieval-images-dir "/path/to/rsitmd/images" \
+      --retrieval-json-dir "/path/to/dataset_rsitmd.json" \
+      --remoteclip-path "/path/to/RemoteCLIP_ViT-B-32.pt"
     ```
 
 
@@ -193,10 +193,11 @@ If you find this work useful, please cite our paper as:
                   Liyong Fu and
                   Jun Zhou},
   title        = {RemoteCLIP: {A} Vision Language Foundation Model for Remote Sensing},
-  journal      = {CoRR},
-  volume       = {abs/2306.11029},
-  year         = {2023},
-  url          = {https://doi.org/10.48550/arXiv.2306.11029},
-  doi          = {10.48550/arXiv.2306.11029}
+  journal      = {{IEEE} Transactions on Geoscience and Remote Sensing},
+  volume       = {62},
+  pages        = {1--16},
+  year         = {2024},
+  url          = {https://doi.org/10.1109/TGRS.2024.3390838},
+  doi          = {10.1109/TGRS.2024.3390838},
 }
 ```
